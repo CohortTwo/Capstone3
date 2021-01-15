@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" onMouseClicked="#handleButtonAction3" prefHeight="626.0" prefWidth="839.0" style="-fx-background-color: #284d8a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxconndbase.FXMLDocumentController">
+   <children>
+      <VBox layoutX="14.0" layoutY="92.0" prefHeight="478.0" prefWidth="68.0" spacing="20.0">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="68.0" text="Emp Id" textFill="#2ee016">
+               <VBox.margin>
+                  <Insets bottom="12.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="27.0" prefHeight="17.0" prefWidth="70.0" text="First Name" textFill="#19f520">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="44.0" prefHeight="17.0" prefWidth="69.0" text="Last Name" textFill="#10e87c">
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="61.0" prefHeight="17.0" prefWidth="71.0" text="Manager Id" textFill="#1ee16c">
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="78.0" prefHeight="17.0" prefWidth="71.0" text="Salary" textFill="#1be150">
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="175.0" prefHeight="17.0" prefWidth="79.0" text="Department" textFill="#12eb86">
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="236.0" prefHeight="17.0" prefWidth="79.0" text="Email" textFill="#1fd069">
+               <VBox.margin>
+                  <Insets bottom="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="281.0" prefHeight="17.0" prefWidth="79.0" text="Phone Num" textFill="#2cc992">
+               <VBox.margin>
+                  <Insets bottom="7.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="318.0" prefHeight="17.0" prefWidth="79.0" text="Hire Date" textFill="#15ff92">
+               <VBox.margin>
+                  <Insets bottom="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="355.0" prefHeight="17.0" prefWidth="79.0" text="Commission" textFill="#13e173">
+               <VBox.margin>
+                  <Insets bottom="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="392.0" prefHeight="17.0" prefWidth="79.0" text="Job" textFill="#22ee85" />
+         </children>
+      </VBox>
+      <VBox layoutX="89.0" layoutY="92.0" prefHeight="486.0" prefWidth="86.0" spacing="20.0">
+         <children>
+            <TextField fx:id="txteid" onMouseReleased="#handleButtonAction3" prefHeight="18.0" prefWidth="86.0" />
+            <TextField fx:id="txtefname" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="txtelname" layoutX="10.0" layoutY="35.0" />
+            <ChoiceBox fx:id="txtmemgr" prefWidth="150.0" />
+            <TextField fx:id="txtesal" layoutX="10.0" layoutY="85.0" />
+            <TextField fx:id="txtedept" />
+            <TextField fx:id="txteemail" layoutX="10.0" layoutY="235.0" />
+            <TextField fx:id="txtephone" layoutX="10.0" layoutY="280.0" />
+            <DatePicker fx:id="txtehdate" />
+            <TextField fx:id="txtecomm" layoutX="10.0" layoutY="370.0" />
+            <TextField fx:id="txtejob" layoutX="10.0" layoutY="415.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tblvemp" layoutX="198.0" layoutY="83.0" onMouseClicked="#handleButtonAction3" prefHeight="478.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="coleid" prefWidth="59.0" text="Emp ID" />
+          <TableColumn fx:id="colefname" prefWidth="70.0" text="First Name" />
+            <TableColumn fx:id="colelname" prefWidth="65.0" text="Last Name" />
+            <TableColumn fx:id="colemgr" prefWidth="76.0" text="Manager Id" />
+            <TableColumn fx:id="colesal" prefWidth="75.0" text="Salary" />
+            <TableColumn fx:id="coledept" prefWidth="66.0" text="Department" />
+            <TableColumn fx:id="colejob" prefWidth="68.0" text="Job" />
+            <TableColumn fx:id="coleemail" prefWidth="68.0" text="Email" />
+            <TableColumn fx:id="colephone" prefWidth="68.0" text="Phone Num" />
+            <TableColumn fx:id="colehdate" prefWidth="68.0" text="Hire Date" />
+            <TableColumn fx:id="colecomm" prefWidth="68.0" text="Commission" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnaddemp" layoutX="21.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #f2a90a;" text="Add" />
+      <Button fx:id="btnupdateemp" layoutX="123.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #76f20a;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@eidt1.jpg" />
+               </image></ImageView>
+         </graphic></Button>
+      <Button fx:id="btnremoveemp" layoutX="234.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #f20a0a;" text="Remove" />
+      <Text fill="#eeca00" layoutX="220.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management System" textAlignment="CENTER" wrappingWidth="373.13671875">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Button fx:id="btn" layoutX="466.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="25.0" prefWidth="75.0" text="Search" />
+      <TextField fx:id="txt1" layoutX="549.0" layoutY="40.0" />
+   </children>
+</AnchorPane>

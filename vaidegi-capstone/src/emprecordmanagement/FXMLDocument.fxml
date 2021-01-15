@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="tblvemp" prefHeight="580.0" prefWidth="895.0" style="-fx-background-color: #50c7c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emprecordmanagement.FXMLDocumentController">
+    <children>
+      <VBox layoutX="107.0" layoutY="24.0" prefHeight="340.0" prefWidth="191.0">
+         <children>
+            <VBox prefHeight="308.0" prefWidth="216.0">
+               <children>
+                  <TextField fx:id="coleid" prefHeight="25.0" prefWidth="86.0" />
+                  <Label prefHeight="48.0" prefWidth="74.0" text="Emp Name" />
+                  <TextField fx:id="colename" layoutX="10.0" layoutY="46.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="40.0" prefHeight="40.0" prefWidth="65.0" text="Manager" />
+                  <TextField fx:id="colemgr" layoutX="10.0" layoutY="109.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="75.0" prefHeight="32.0" prefWidth="62.0" text="job" />
+                  <TextField fx:id="colejob" layoutX="10.0" layoutY="158.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="110.0" prefHeight="30.0" prefWidth="72.0" text="Salary" />
+                  <TextField fx:id="colesal" layoutX="10.0" layoutY="197.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="145.0" prefHeight="42.0" prefWidth="88.0" text="Commission" />
+                  <TextField fx:id="colecomm" layoutX="10.0" layoutY="224.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="180.0" prefHeight="43.0" prefWidth="91.0" text="Department" />
+                  <TextField fx:id="coledept" layoutX="10.0" layoutY="252.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="10.0" layoutY="215.0" prefHeight="40.0" prefWidth="74.0" text="Hiredate" />
+                  <TextField fx:id="colehire" layoutX="10.0" layoutY="275.0" prefHeight="25.0" prefWidth="86.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tc" layoutX="349.0" layoutY="40.0" prefHeight="324.0" prefWidth="536.0">
+        <columns>
+          <TableColumn fx:id="empid" prefWidth="75.0" text="Emp ID" />
+          <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="sal" prefWidth="75.0" text="salary" />
+            <TableColumn fx:id="Inc" prefWidth="75.0" text="Incentive" />
+            <TableColumn fx:id="job" prefWidth="75.0" text="job" />
+            <TableColumn fx:id="Mgr" prefWidth="75.0" text="Manager" />
+            <TableColumn fx:id="Dept" prefWidth="75.0" text="Department" />
+        </columns>
+      </TableView>
+      <TextField layoutX="75.0" layoutY="406.0" prefHeight="25.0" prefWidth="62.0" text="Add" />
+      <TextField layoutX="149.0" layoutY="406.0" prefHeight="25.0" prefWidth="62.0" text="Edit" />
+      <TextField layoutX="236.0" layoutY="406.0" prefHeight="25.0" prefWidth="62.0" text="Remove" />
+    </children>
+</AnchorPane>

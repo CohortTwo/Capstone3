@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<fx:root type="javafx.scene.control.TableView" fx:id="employee_table" prefHeight="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <columns>
+        <TableColumn fx:id="employeeIdColumn" prefWidth="100.0" text="EmployeeId">
+            <cellValueFactory>
+                <PropertyValueFactory property="employeeId" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="FirstName">
+            <cellValueFactory>
+                <PropertyValueFactory property="firstName" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="LastName" >
+            <cellValueFactory>
+                <PropertyValueFactory property="lastName"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="emailColumn" prefWidth="180.0" text="Email" >
+            <cellValueFactory>
+                <PropertyValueFactory property="email"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="phoneColumn" prefWidth="100.0" text="Phone Number" >
+            <cellValueFactory>
+                <PropertyValueFactory property="phoneNumber"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="hireDateColumn" prefWidth="75.0" text="Hire Date" >
+            <cellValueFactory>
+                <PropertyValueFactory property="hireDate"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="salaryColumn" prefWidth="75.0" text="Salary" >
+            <cellValueFactory>
+                <PropertyValueFactory property="salary"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="commissionColumn" prefWidth="100.0" text="Commission" >
+            <cellValueFactory>
+                <PropertyValueFactory property="commisionPct"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="managerColumn" prefWidth="100.0" text="Manager" >
+            <cellValueFactory>
+                <PropertyValueFactory property="managerId"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="departmentColumn" prefWidth="100.0" text="Department" >
+            <cellValueFactory>
+                <PropertyValueFactory property="departmentId"/>
+            </cellValueFactory>
+        </TableColumn>
+    </columns>
+</fx:root>

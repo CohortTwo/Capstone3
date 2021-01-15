@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<fx:root type="javafx.scene.control.MenuBar" fx:id="empMenuBar" prefHeight="30.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <menus>
+        <Menu mnemonicParsing="false">
+            <graphic>
+                <Label fx:id="home" text="Home"/>
+            </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false">
+            <graphic>
+                <Label fx:id="add" text="Add"/>
+            </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false">
+            <graphic>
+                <Label fx:id="edit" text="Edit"/>
+            </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false">
+            <graphic>
+                <Label fx:id="remove" text="Remove"/>
+            </graphic>
+        </Menu>
+        <Menu mnemonicParsing="false">
+            <graphic>
+                <Label fx:id="view" text="View"/>
+            </graphic>
+        </Menu>
+    </menus>
+</fx:root>

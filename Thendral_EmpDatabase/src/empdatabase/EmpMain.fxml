@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Spot?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1236.0" style="-fx-background-color: #deedfa; -fx-background-color: ;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="empdatabase.EmpMainController">
+   <children>
+      <VBox layoutX="23.0" layoutY="88.0" prefHeight="292.0" prefWidth="96.0" spacing="20.0">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" text="Emp Id" textAlignment="RIGHT">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="31.0" text="Emp Name" textAlignment="RIGHT">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label lineSpacing="8.0" text="Manager">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" graphicTextGap="5.0" layoutX="10.0" layoutY="10.0" lineSpacing="8.0" text="Job">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="52.0" text="Salary">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="73.0" text="Commission">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Department">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Hiredate">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="123.0" layoutY="88.0" prefHeight="306.0" prefWidth="158.0" spacing="12.0">
+         <children>
+            <TextField fx:id="txteid" />
+            <TextField fx:id="txtename" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="txtmemgr" layoutX="10.0" layoutY="41.0" />
+            <TextField fx:id="txtejob" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="txtesal" layoutX="10.0" layoutY="72.0" />
+            <TextField fx:id="txtecomm" layoutX="10.0" layoutY="103.0" />
+            <TextField fx:id="txtedept" layoutX="10.0" layoutY="134.0" />
+            <TextField fx:id="txtedoj" prefHeight="5.0" prefWidth="158.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tblvemp" layoutX="335.0" layoutY="42.0" prefHeight="501.0" prefWidth="728.0">
+        <columns>
+          <TableColumn fx:id="coleid" prefWidth="75.0" text="Emp ID" />
+          <TableColumn fx:id="colename" prefWidth="140.0" text="Emp Name" />
+            <TableColumn fx:id="colemgr" prefWidth="75.0" text="Manager" />
+            <TableColumn fx:id="colejob" prefWidth="111.0" text="Job" />
+            <TableColumn fx:id="colesal" prefWidth="81.0" text="Salary" />
+            <TableColumn fx:id="colecomm" text="Incentive" />
+            <TableColumn fx:id="coledept" prefWidth="111.0" text="Department" />
+            <TableColumn fx:id="coledoj" prefWidth="229.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnaddemp" layoutX="34.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="74.0" text="Add" />
+      <Button fx:id="btnremoveemp" layoutX="216.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="65.0" text="Remove" />
+      <Label alignment="CENTER" layoutX="528.0" layoutY="6.0" prefHeight="31.0" prefWidth="329.0" text="Employee Details" textFill="#430fef">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.97">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Spot color="#2b9ed3" />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Button fx:id="btnupdateemp" layoutX="123.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="74.0" text="Edit" />
+   </children>
+</AnchorPane>

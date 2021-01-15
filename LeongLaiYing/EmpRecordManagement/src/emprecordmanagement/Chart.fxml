@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="702.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emprecordmanagement.ChartController">
+   <children>
+      <PieChart fx:id="piesal" layoutX="175.0" layoutY="280.0" prefHeight="378.0" prefWidth="505.0" styleClass="border" title="Salary Pie" />
+      <BarChart fx:id="barsal" layoutX="146.0" layoutY="29.0" prefHeight="235.0" prefWidth="437.0" styleClass="border" title="Employee Barchart">
+        <xAxis>
+          <CategoryAxis label="Employees" side="BOTTOM">
+               <rotationAxis>
+                  <Point3D x="13.0" z="1.0" />
+               </rotationAxis>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Salary" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button fx:id="btnPie" layoutX="29.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Employee" />
+   </children>
+</AnchorPane>

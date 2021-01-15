@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Jan, 2021, 5:02:47 PM
+    Author     : LaiYing
+*/
+
+.button {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-color: yellow;
+    -fx-border-color: black;
+
+}
+#Cancel{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+.Operation{
+    -fx-background-color: lightgrey;
+}
+.border{
+    -fx-border-color: black;
+    -fx-background-color:lightblue;
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="643.0" prefWidth="943.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emprecordmanagement.EmpMainController">
+   <children>
+      <HBox layoutX="21.0" layoutY="128.0" prefHeight="386.0" prefWidth="235.0">
+         <children>
+            <VBox prefHeight="331.0" prefWidth="97.0" spacing="32.0">
+               <children>
+                  <Label fx:id="labelempno" text="Emp ID" />
+                  <Label fx:id="labelename" layoutX="10.0" layoutY="10.0" text="Emp Name" />
+                  <Label fx:id="labeljob" layoutX="10.0" layoutY="27.0" text="Job" />
+                  <Label fx:id="labelmgr" layoutX="10.0" layoutY="44.0" text="Mgr ID" />
+                  <Label fx:id="labelhiredate" layoutX="10.0" layoutY="61.0" text="Hire Date" />
+                  <Label fx:id="labelsal" layoutX="10.0" layoutY="78.0" text="Salary" />
+                  <Label fx:id="labelcomm" layoutX="10.0" layoutY="95.0" text="Commission" />
+                  <Label fx:id="labeldeptno" text="Dept ID" />
+               </children>
+            </VBox>
+            <VBox fillWidth="false" prefHeight="328.0" prefWidth="127.0" spacing="23.0">
+               <children>
+                  <TextField fx:id="tfempno" />
+                  <TextField fx:id="tfename" layoutX="10.0" layoutY="10.0" />
+                  <ChoiceBox fx:id="tfjob" prefWidth="150.0" />
+                  <ChoiceBox fx:id="tfmgr" prefWidth="150.0" />
+                  <DatePicker fx:id="tfhiredate" promptText="Click to select date" />
+                  <TextField fx:id="tfsal" layoutX="10.0" layoutY="110.0" />
+                  <TextField fx:id="tfcomm" layoutX="10.0" layoutY="135.0" prefHeight="26.0" prefWidth="132.0" />
+                  <ChoiceBox fx:id="tfdeptno" prefWidth="150.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tableemp" layoutX="282.0" layoutY="118.0" onMouseClicked="#handleMouseClick" prefHeight="371.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="tcolempno" prefWidth="75.0" text="Emp ID" />
+          <TableColumn fx:id="tcolename" prefWidth="75.0" text="Emp Name" />
+            <TableColumn fx:id="tcoljob" prefWidth="75.0" text="Job" />
+            <TableColumn fx:id="tcolmgr" prefWidth="75.0" text="Mgr ID" />
+            <TableColumn fx:id="tcolhiredate" prefWidth="75.0" text="Hire Date" />
+            <TableColumn fx:id="tcolsal" prefWidth="75.0" text="Salary" />
+            <TableColumn fx:id="tcolcomm" prefWidth="75.0" text="Commission" />
+            <TableColumn fx:id="tcoldeptno" prefWidth="75.0" text="Dept ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="add" layoutX="30.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Add">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@addbutton.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="edit" layoutX="110.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Edit">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@editbutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="remove" layoutX="177.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Remove">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@removebutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="289.0" layoutY="38.0" text="Employees Management System" textAlignment="CENTER" textFill="#150b7d">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="getreports" layoutX="84.0" layoutY="581.0" mnemonicParsing="false" onAction="#changeScene" text="Get reports!">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@handclicklogo.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <MenuBar fx:id="menubar" layoutY="2.0">
+        <menus>
+          <Menu fx:id="menufile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="fmclose" mnemonicParsing="false" onAction="#closeApp" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuedit" mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuhelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxcompany.FXCompanyController">
+   <children>
+      <HBox fx:id="hbox" layoutX="3.0" layoutY="54.0" prefHeight="237.0" prefWidth="230.0" visible="false">
+         <children>
+            <VBox prefHeight="316.0" prefWidth="79.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Employee ID" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="First Name" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Last Name" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Manager" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Job Title" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Salary" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Commission" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Department" />
+                  <Label prefHeight="25.0" prefWidth="96.0" text="Hired Date" />
+               </children>
+            </VBox>
+            <VBox prefHeight="237.0" prefWidth="149.0">
+               <children>
+                  <TextField fx:id="txtEmpId" />
+                  <TextField fx:id="txtFName" />
+                  <TextField fx:id="txtLName" />
+                  <ChoiceBox fx:id="cboxMgr" prefWidth="150.0" />
+                  <ChoiceBox fx:id="cboxJobT" prefWidth="150.0" />
+                  <TextField fx:id="txtSal" />
+                  <TextField fx:id="txtCom" />
+                  <ChoiceBox fx:id="cboxDept" prefWidth="150.0" />
+                  <DatePicker fx:id="dpicker" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tableEmp" layoutX="238.0" layoutY="2.0" prefHeight="491.0" prefWidth="688.0">
+        <columns>
+          <TableColumn fx:id="colEmpId" prefWidth="75.0" text="Employee ID" />
+          <TableColumn fx:id="colFName" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="colLName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="colMgr" prefWidth="75.0" text="Manager" />
+            <TableColumn fx:id="colJobT" prefWidth="75.0" text="Job Title" />
+            <TableColumn fx:id="colSal" prefWidth="75.0" text="Salary" />
+            <TableColumn fx:id="colComm" prefWidth="75.0" text="Commission" />
+            <TableColumn fx:id="colDep" prefWidth="75.0" text="Department" />
+            <TableColumn fx:id="colHdate" prefWidth="75.0" text="Hired Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="1.0" layoutY="317.0" mnemonicParsing="false" onAction="#addRecord" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="73.0" layoutY="317.0" mnemonicParsing="false" onAction="#updateRecord" prefHeight="25.0" prefWidth="60.0" text="Update" />
+      <Button fx:id="btnRemove" layoutX="144.0" layoutY="317.0" mnemonicParsing="false" onAction="#removeRecord" prefHeight="25.0" prefWidth="60.0" text="Remove" />
+      <Button fx:id="btnLogOut" layoutX="31.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+      <Button fx:id="btnUpdateNext" defaultButton="true" layoutX="192.0" layoutY="291.0" mnemonicParsing="false" onAction="#nextUpdateAction" text="Next" visible="false" />
+      <Button fx:id="btnAddNext" layoutX="192.0" layoutY="291.0" mnemonicParsing="false" onAction="#nextAddAction" text="Next" visible="false" />
+      <Button fx:id="btnChart" layoutX="73.0" layoutY="375.0" mnemonicParsing="false" onAction="#chartDepartment" text="Show Chart" />
+      <PieChart fx:id="pieSal" layoutX="22.0" layoutY="45.0" prefHeight="322.0" prefWidth="517.0" title="Salary Statistic" visible="false" />
+      <PieChart fx:id="pieCount" layoutX="539.0" layoutY="45.0" prefHeight="322.0" prefWidth="437.0" title="HeadCount Statistic" visible="false" />
+      <Button fx:id="btnReturn" layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#returnMain" text="Return" visible="false" />
+      <Button fx:id="btnAlt" layoutX="144.0" layoutY="375.0" mnemonicParsing="false" onAction="#altChart" text="Alternate Chart" visible="false" />
+   </children>
+</AnchorPane>

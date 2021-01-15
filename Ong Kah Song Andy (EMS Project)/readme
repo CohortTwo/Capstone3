@@ -1,5 +1,5 @@
 All external libraries and datasource required is included in src/lib and src/main/resources respectively. No need to connect to a database server, just use the sqlite3 db file and you can run the program with full database functionalities.
 
-Only netbean is required to run this program. Start the command prompt. Go to the root of the project directory where the pom.xml file is and execute the below. ($NETBEAN_HOME is the folder where you install you netbean)   
+Only netbean is required to run this program. Start the command prompt. Go to the root of the project directory where the pom.xml file is and execute the below. ($NETBEAN_HOME is the folder where you install netbean)   
 
 $NETBEAN_HOME/netbeans/java/maven/bin/mvn compile exec:java -Dexec.mainClass="hr.HR" -Dexec.args="-cp target/classes:src/lib/sqlite-jdbc-3.34.0.jar:src/lib/lanterna-3.1.0.jar" -Dexec.executable=/opt/jdk-15.0.1/bin/java process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
